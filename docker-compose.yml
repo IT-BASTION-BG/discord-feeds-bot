@@ -1,7 +1,7 @@
 services:
-  python:
+  discord-bot:
     image: python:3.13
-    container_name: python
+    container_name: discord-bot
     restart: unless-stopped
     tty: true
     user: "1000:1000"
