@@ -8,8 +8,9 @@ services:
     working_dir: /var/www
     environment:
       - HOME=/tmp
-    expose:
-      - "3000"
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
     command: sh -c "pip install --no-cache-dir --user -r requirements.txt && python3 bot.py"
     volumes:
       - ./www:/var/www
